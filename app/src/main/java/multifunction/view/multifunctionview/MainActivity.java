@@ -18,11 +18,19 @@ public class MainActivity extends AppCompatActivity {
         changeViewButton = findViewById(R.id.changeViewButton);
         fourInOneViews = findViewById(R.id.fourInOneViews);
 
-                String[] countryNameArray = new String[]{
-                        "Afghanistan","Argentina", "Australia","Brazil","Canada","China","Denmark","United States","India","Singapore","Russia"
-        };
-        final ArrayAdapter<String> countryListadapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, countryNameArray);
+                String[] countryName = new String[]{
+                        "Afghanistan","Argentina", "Australia","Brazil","Canada","China","Denmark","United States","India","Singapore","Russia"};
+
+        final ArrayAdapter<String> countryListadapterAutoComplete = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, countryName);
+
+        String[] stateName = new String[]
+                {"Andaman and Nicobar Islands","Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh",
+                        "Chhattisgarh","Dadra and Nagar Haveli", "Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana",
+                        "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Lakshadweep", "Madhya Pradesh",
+                        "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Orissa", "Pondicherry", "Punjab", "Rajasthan",
+                        "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttaranchal", "Uttar Pradesh", "West Bengal"};
+
+        final ArrayAdapter<String> countryListadapterSpinner = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, stateName);
 
         changeViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 else if (fourInOneViews.getCurrentViewMode() == 1) {
-                    fourInOneViews.setText(getResources().getString(R.string.txt_autocompletetextview));
+                    fourInOneViews.setText("");
                     fourInOneViews.changeView(FourInOneViews.selectview.AutoCompleteTextView);
-                    fourInOneViews.setAdapter(countryListadapter);
+                    fourInOneViews.setAdapter(countryListadapterAutoComplete);
                     changeViewButton.setText(getResources().getString(R.string.txt_autocompletetextview));
                 }
 
                 else if(fourInOneViews.getCurrentViewMode() == 2) {
-                    fourInOneViews.setText(getResources().getString(R.string.txt_spinner));
+                    fourInOneViews.setText("");
                     fourInOneViews.changeView(FourInOneViews.selectview.Spinner);
-                    fourInOneViews.setAdapter(countryListadapter);
-                    countryListadapter.notifyDataSetChanged();
+                    fourInOneViews.setAdapter(countryListadapterSpinner);
+                    countryListadapterAutoComplete.notifyDataSetChanged();
                     changeViewButton.setText(getResources().getString(R.string.txt_spinner));
                 }
 
