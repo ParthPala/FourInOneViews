@@ -52,3 +52,31 @@ Following is the sample code-
    fourInOneViews.setAdapter(CountryListadapter);
    CountryListadapter.notifyDataSetChanged();
   ``` 
+  ## Preview
+   #### For TextView & EditText
+  ![Alt Text](https://github.com/ParthPala/FourInOneViews/blob/master/app/src/main/res/Gifs/example1.gif)
+  #### For AutoCompleteTextView & Spinner
+  ![Alt Text](https://github.com/ParthPala/FourInOneViews/blob/master/app/src/main/res/Gifs/example2.gif)
+  
+  ## For Customization 
+  ```
+  // to set drawable/icon for spinner
+ setDropDownDrawable(Drawable drawable)
+   ```
+   ```
+   // to set number of characters after which the search should begin for AutoCompleteTextView
+ setThreshold(int numOfChar)
+   ```
+   ```
+   //to set drawable/icon with custom height and width
+   setDropDownDrawable(Drawable drawable, int height, int width);
+   ```
+   ```
+   // returns int for current view state
+  getCurrentViewMode()
+   ```
+   ```
+   //View to anchor the auto-complete dropdown.
+  setDropDownAnchor()
+   ```
+  
