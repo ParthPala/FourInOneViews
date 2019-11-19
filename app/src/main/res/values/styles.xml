@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="FourInOneViews">
+        <attr name="selectview" format="enum" >
+            <enum name="TextView" value="0"/>
+            <enum name="EditText" value="1"/>
+            <enum name="AutoCompleteTextView" value="2"/>
+            <enum name="Spinner" value="3"/>
+        </attr>
+        <attr name="dropDownDrawable" format="reference" />
+        <attr name="dropDownDrawableWidth" format="dimension" />
+        <attr name="dropDownDrawableHeight" format="dimension" />
+        <attr name="dropDownDrawableSpacing" format="dimension" />
+        <attr name="dropDownAnimStyle" format="reference" />
+        <attr name="dropDownAnchor" format="integer" />
+        <attr name="dropDownWidth" format="dimension" />
+        <attr name="dropDownHeight" format="dimension" />
+        <attr name="dropDownSelector" format="reference" />
+    </declare-styleable>
+</resources>

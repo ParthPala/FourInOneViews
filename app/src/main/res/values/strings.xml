@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DoublePView</string>
+    <string name="txt_edittext">This is an EditText </string>
+    <string name="txt_textview">This is an TextView </string>
+    <string name="txt_autocompletetextview">This is an AutoCompleteTextView </string>
+    <string name="txt_spinner">This is a Spinner </string>
+
+</resources>
